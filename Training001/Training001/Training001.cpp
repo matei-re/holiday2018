@@ -7,25 +7,34 @@ using namespace std;
 
 int main()
 {
-	int x, divi, stich;
-	cin >> x;
-	stich = 0;
-	for (divi = 2; divi <= x / 2; divi++) 
+	int a, b, x, divi, stich, sid;
+	cin >> a;
+	cin >> b;
+
+	if (a > b)
 	{
-		if (x % divi == 0)
+		sid = a;
+		a = b;
+		b = sid;
+	}
+	
+	for (x = a; x <= b; x ++)
+	{
+		stich = 0;
+		for (divi = 2; divi <= x / 2; divi++)
 		{
-			stich ++;
-			break;
+			if (x % divi == 0)
+			{
+				stich++;
+				break;
+			}
+		}
+		if (stich == 0 && x != 1)
+		{
+			cout << x << " ";
 		}
 	}
-	if (stich == 0 && x != 1)
-	{
-		cout << "Prim" << endl;
-	}
-	else
-	{
-		cout << "Compus" << endl;
-	}
-    return 0;
+
+	return 0;
 }
 
