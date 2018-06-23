@@ -7,13 +7,14 @@ using namespace std;
 
 int main()
 {
-	int x, divi;
+	int x, divi, stich;
 	cin >> x;
-	for (divi = 1; divi <= x; divi++) 
+	for (divi = 2; divi <= x / 2; divi++) 
 	{
 		if (x % divi == 0)
 		{
-			cout << divi << " ";
+			stich ++;
+			break;
 		}
 	}
     return 0;
