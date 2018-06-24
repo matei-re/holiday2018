@@ -5,7 +5,7 @@
 using namespace std;
 
 // Se citeste un umar n. Apoi un sir de n numere. Sa se spuna daca
-// in sirul celor n numere exista cel putin un numar negativ.
+// in sirul celor n numere TOATE sunt negative.
 
 int main()
 {
@@ -19,10 +19,10 @@ int main()
 		cin >> m;
 		if (m < 0)
 		{
-			neg = 1;
+			y ++;
 		}
 	}
-	if (neg == 1)
+	if (y == n)
 	{
 		cout << "Dap." << endl;
 	}
