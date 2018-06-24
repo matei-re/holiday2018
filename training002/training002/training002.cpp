@@ -7,24 +7,28 @@ using namespace std;
 
 int main()
 {
-	int x, s, y;
-	cin >> x;
-	s = 0;
-	y = x;
-	while (x != 0)
+	int a, b, x, s, y;
+	cin >> a;
+	cin >> b;
+	if (a > b)
 	{
-		s = s * 10 + x % 10;
-		x = x / 10;
+		s = a;
+		a = b;
+		b = s;
 	}
-	if (y == s)
+	for (y = a; y <= b; y ++) 
 	{
-		cout << "Numarul e palindrom" << endl;
+		s = 0;
+		x = y;
+		while (x != 0)
+		{
+			s = s * 10 + x % 10;
+			x = x / 10;
+		}
+		if (s == y)
+		{
+			cout << s << " ";
+		}
 	}
-	else
-	{
-		cout << "Numarul nu e palindrom" << endl;
-	}
-
     return 0;
 }
-
