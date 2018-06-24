@@ -10,17 +10,19 @@ using namespace std;
 int main()
 {
 	int n, m, x, y;
+	bool neg;
 	cin >> n;
 	y = 0;
+	neg = 0;
 	for (x = 1; x <= n; x ++)   
 	{
 		cin >> m;
 		if (m < 0)
 		{
-			y ++;
+			neg = 1;
 		}
 	}
-	if (y >= 1)
+	if (neg == 1)
 	{
 		cout << "Dap." << endl;
 	}
