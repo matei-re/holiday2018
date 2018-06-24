@@ -12,10 +12,10 @@ int main()
 	s = 0;
 	while (x != 0)
 	{
-		s += (x % 10);
+		s = s * 10 + x % 10;
 		x = x / 10;
 	}
-	cout << "Suma cifrelor numaului dat este de " << s << endl;
+	cout << "Numarul inversat este " << s << endl;
 
     return 0;
 }
