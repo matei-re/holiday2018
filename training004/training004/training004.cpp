@@ -7,20 +7,20 @@ using namespace std;
 
 int main()
 {
-	int n, x, p;
+	int n, k, x, p;
 	cout << "Introdu nr!" << endl;
 	cin >> n;
-	x = 0;
-	p = 1;
+	cout << "Introdu baza!" << endl;
+	cin >> k;
+	x = 0; // x o sa fie n in baza k
+	p = 1; // puterea (1, 10, 100, ...)
 	while (n)
 	{
-		if (n % 2 == 0) {
-			x = n % 10 * p + x;
-			p *= 10;
-		}
-		n /= 10;
+		x = n % k * p + x;
+		p *= 10;
+		n = n / k;
 	}
-	cout << "Nr fara cifre imapre este " << x << endl;
+	cout << "Nr " << n << " in baza " << k << " este " << x << endl;
 
     return 0;
 }
