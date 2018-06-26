@@ -7,9 +7,10 @@ using namespace std;
 
 int main()
 {
-	int n, m, o;
+	int n, m, o, p;
 	m = 0;
 	o = 0;
+	p = 0;
 	cout << "Inserati nr!" << endl;
 	cin >> n;
 	while (n)
@@ -18,10 +19,15 @@ int main()
 		n = n / 10;
 		if (o > m)
 		{
+			p = 0;
 			m = o;
 		}
+		if (o == m)
+		{
+			p++;
+		}
 	}
-	cout << "Cea mai mare cifra este " << m << endl;
+	cout << "Cea mai mare cifra este " << m << ". Cifra apare de " << p << " ori." << endl;
 	return 0;
 }
 
