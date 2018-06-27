@@ -7,11 +7,12 @@ using namespace std;
 
 int main()
 {
-	int n, x, a, b, n2;
+	int n, x, a, b, n2, c;
 	// n este nr 
 	// a este cifra curenta
 	// x este nr final
-	// n2 este cpie a lui n
+	// n2 este copie a lui n
+	// c contorizeaza
 
 	cout << "Numarul" << endl;
 	cin >> n2;
@@ -20,6 +21,7 @@ int main()
 
 	for (b = 9; b >= 0; b--)
 	{
+		c = 0;
 		n = n2;
 
 		while (n)
@@ -28,10 +30,14 @@ int main()
 
 			if (a == b)
 			{
-				x = x * 10 + b;
+				c++;
 			}
 
 			n /= 10;
+		}
+		if (c > 0)
+		{
+			x = x * 10 + b;
 		}
 	}
 
