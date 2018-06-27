@@ -7,31 +7,33 @@ using namespace std;
 
 int main()
 {
-	int n, x, n2, a, b;
+	int n, x, a, b, n2;
 	// n este nr 
-	// n2 este copia lui n
 	// a este cifra curenta
 	// x este nr final
+	// n2 este cpie a lui n
 
 	cout << "Numarul" << endl;
-	cin >> n;
-	n2 = n;
+	cin >> n2;
 
-	while (n)
+	x = 0;
+
+	for (b = 9; b >= 0; b--)
 	{
-		a = n % 10;
+		n = n2;
 
-		for (b = 9; b >= 0; b--)
+		while (n)
 		{
-			if (b == a)
+			a = n % 10;
+
+			if (a == b)
 			{
 				x = x * 10 + b;
 			}
+
+			n /= 10;
 		}
-
-		n /= 10;
 	}
-
 
 	cout << "Cel mai mare nr format din cifrele nr dat este " << x << endl;
 
