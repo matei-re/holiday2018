@@ -9,6 +9,7 @@ using namespace std;
 int main()
 {
 	int n, a, b, c;
+
 	cin >> n;
 
 	for (a = 0; a <= n - 2; a++)
@@ -16,7 +17,11 @@ int main()
 		for (b = a + 1; b <= n - 1; b++)
 		{
 			c = n - (a + b);
-			cout << a << " " << b << " " << c << endl;
+
+			if (c > b)
+			{
+				cout << a << " " << b << " " << c << endl;
+			}
 		}
 	}
 
