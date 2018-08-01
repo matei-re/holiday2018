@@ -32,7 +32,7 @@ int main()
 			}
 		}
 	}
-
+	
 	if (c == 0)
 	{
 		cout << "Elementele sunt distincte 2 cate 2" << endl;
@@ -44,4 +44,6 @@ int main()
 	}
 
     return 0;
-}
+
+
+// vectori yay
