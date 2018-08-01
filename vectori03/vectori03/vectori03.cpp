@@ -29,7 +29,7 @@ int main()
 			b++;
 		}
 	}
-
+	cout << "Eleentele pare:\n"
 	for (a = 0; a < b; a++)
 	{
 		cout << w[a] << " ";
